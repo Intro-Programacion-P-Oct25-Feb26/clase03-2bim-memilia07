@@ -36,6 +36,7 @@ public class Ejemplo11 {
         int valor1;
         int valor2;
         
+        // t es para hacerlo como tabulador
         for (int fila = 0; fila < arreglo1.length; fila++) {
             for (int col = 0; col < arreglo1[fila].length; col++) {
                 valor1 = arreglo1[fila][col];

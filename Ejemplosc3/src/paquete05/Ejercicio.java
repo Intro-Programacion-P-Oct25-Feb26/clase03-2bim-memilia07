@@ -17,23 +17,46 @@ public class Ejercicio {
 
         String[] nombres = new String[5];
         double[][] produccion = new double[5][12];
-        double[] totalProduccion = new double[5];
+        double mayor = 0;
+        int posMayor = 0;
+        double[] total = new double[5];
 
         for (int fila = 0; fila < nombres.length; fila++) {
             System.out.printf("Ingrese el nombre del encargado de la estación %d: ", fila + 1);
             nombres[fila] = entrada.nextLine();
+
+            total[fila] = 0;
         }
 
         for (int fila = 0; fila < produccion.length; fila++) {
             System.out.printf("Producción mensual para %s:\n", nombres[fila]);
-            
 
-            for (int j = 0; j < produccion[fila].length; j++) {
-                System.out.printf("Mes %d: $", j + 1);
-                produccion[fila][j] = entrada.nextDouble();
+            for (int col = 0; col < produccion[fila].length; col++) {
+                System.out.printf("Mes %d: $", col + 1);
+                produccion[fila][col] = entrada.nextDouble();
+
+                total[fila] = total[fila] + produccion[fila][col];
             }
+
+            entrada.nextLine();
+        }
+        for (int fila = 0; fila < produccion.length; fila++) {
+            if (total[fila] > mayor) {
+
+                mayor = total[fila];
+                posMayor = fila;
+            }
+
+        }
+        for (int i = 0; i < produccion.length; i++) {
+            System.out.println(nombres[i] + " - Total Producción: $ " + total[i]);
         }
 
-       
+        System.out.printf("\nEstación más productiva: %s"
+                + "\nEncargado de la estación: %s"
+                + "\nCantidad de la estación más productiva: $ %.2f ", nombres[posMayor],
+                 nombres[posMayor],
+                 mayor);
+
     }
 }

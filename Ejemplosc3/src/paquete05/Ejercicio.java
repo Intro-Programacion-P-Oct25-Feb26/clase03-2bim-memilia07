@@ -48,15 +48,15 @@ public class Ejercicio {
             }
 
         }
-        for (int i = 0; i < produccion.length; i++) {
-            System.out.println(nombres[i] + " - Total Producción: $ " + total[i]);
+        for (int fila = 0; fila < produccion.length; fila++) {
+            System.out.println(nombres[fila] + " - Total Producción: $ " + total[fila]);
         }
 
         System.out.printf("\nEstación más productiva: %s"
                 + "\nEncargado de la estación: %s"
                 + "\nCantidad de la estación más productiva: $ %.2f ", nombres[posMayor],
-                 nombres[posMayor],
-                 mayor);
+                nombres[posMayor],
+                mayor);
 
     }
 }

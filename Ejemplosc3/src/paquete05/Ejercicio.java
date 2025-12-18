@@ -49,7 +49,7 @@ public class Ejercicio {
 
         }
         for (int fila = 0; fila < produccion.length; fila++) {
-            System.out.println(nombres[fila] + " - Total Producción: $ " + total[fila]);
+            System.out.printf("%s - Total Producción: $%.2f\n", nombres[fila], total[fila]);
         }
 
         System.out.printf("\nEstación más productiva: %s"

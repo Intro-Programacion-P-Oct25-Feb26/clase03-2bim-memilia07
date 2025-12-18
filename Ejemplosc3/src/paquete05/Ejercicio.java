@@ -23,9 +23,7 @@ public class Ejercicio {
 
         for (int fila = 0; fila < nombres.length; fila++) {
             System.out.printf("Ingrese el nombre del encargado de la estación %d: ", fila + 1);
-            nombres[fila] = entrada.nextLine();
-
-            total[fila] = 0;
+            nombres[fila] = entrada.nextLine();   
         }
 
         for (int fila = 0; fila < produccion.length; fila++) {
